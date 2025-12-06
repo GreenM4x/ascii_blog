@@ -1,7 +1,9 @@
-@if (postPath(); as path) {
 <div class="blog-content">
-  <markdown [src]="path" (load)="onLoad($event)"></markdown>
+  <a [routerLink]="['/']" class="back-to-list-btn"> ← Back to List </a>
+
+  @if (postContent(); as content) {
+  <markdown [data]="content" (load)="onLoad($event)"></markdown>
+  } @else {
+  <p>Loading post...</p>
+  }
 </div>
-} @else {
-<p>Loading post...</p>
-}
