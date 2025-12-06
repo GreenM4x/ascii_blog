@@ -1,0 +1,18 @@
+/* src/app/components/blog-post/blog-post.scss */
+
+.blog-content {
+  // Center the blog post content on the screen
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem; // Add padding for small screens
+
+  // Apply basic typography and spacing
+  font-size: 1.1rem;
+
+  // Style for the "Loading post..." fallback
+  p {
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+}

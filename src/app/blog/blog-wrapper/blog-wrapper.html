@@ -1,0 +1,14 @@
+<header class="blog-header">
+  <div class="header-content-wrapper">
+    <a routerLink="/" class="blog-logo">ASCII_Blog.</a>
+    <button class="mode-toggle" (click)="toggleDarkMode()">
+      {{ isDarkMode() ? '☀️' : '🌙' }}
+    </button>
+  </div>
+</header>
+<main class="blog-main-content">
+  <router-outlet></router-outlet>
+</main>
+<footer class="blog-footer">
+  <p>Made with ❤️ by M4x</p>
+</footer>

@@ -1,0 +1,73 @@
+/* src/app/components/list/list.scss */
+
+.blog-list-container {
+  max-width: 900px; // Increased max-width to match the header wrapper
+  margin: 0 auto;
+  padding: 0 1rem 4rem; // Adjusted padding
+
+  h1 {
+    // Overriding global H1 slightly for the list page title
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.grid-layout {
+  display: grid;
+  // On large screens, two columns; on small screens, one column
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+// Style for individual blog post entries
+.post-item {
+  display: flex;
+  flex-direction: column; // Stack elements vertically
+  padding: 1.5rem; // Increased padding for a card look
+
+  // Removed margin-bottom since gap handles spacing now
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px; // Softer corners
+  text-decoration: none;
+  color: var(--color-text-primary); // Ensure text color is inherited
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border-color: var(--color-contrast);
+    border-left: 5px solid var(--color-contrast);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+
+  p {
+    flex-grow: 1; // Makes description take up available space
+    color: var(--color-text-secondary);
+  }
+}
+
+.post-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0; // Reset margin
+  color: var(--color-text-primary);
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.read-more-link {
+  color: var(--color-contrast);
+  font-weight: 600;
+  align-self: flex-start;
+  margin-top: 1rem;
+  border-bottom: 1px solid transparent;
+
+  .post-item:hover & {
+    border-bottom-color: var(--color-contrast);
+  }
+}
