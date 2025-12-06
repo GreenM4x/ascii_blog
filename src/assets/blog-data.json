@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "my-first-post",
+    "title": "My New Trip",
+    "date": "2025-10-24T00:00:00.000Z",
+    "description": "A wonderful journey to...",
+    "path": "assets/posts/my-first-post/post.md",
+    "attributes": {
+      "title": "My New Trip",
+      "date": "2025-10-24T00:00:00.000Z",
+      "description": "A wonderful journey to..."
+    }
+  }
+]

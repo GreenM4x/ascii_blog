@@ -1,0 +1,7 @@
+@if (postPath(); as path) {
+<div class="blog-content">
+  <markdown [src]="path" (load)="onLoad($event)"></markdown>
+</div>
+} @else {
+<p>Loading post...</p>
+}
